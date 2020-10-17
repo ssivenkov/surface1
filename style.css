@@ -1,0 +1,198 @@
+/* обнуление стилей */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('fonts/ProximaNova-Bold.eot');
+  src: local('fonts/Proxima Nova Bold'), local('fonts/ProximaNova-Bold'),
+    url('fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Bold.woff') format('woff'),
+    url('fonts/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url('fonts/ProximaNova-Regular.eot');
+  src: local('fonts/Proxima Nova Regular'), local('fonts/ProximaNova-Regular'),
+    url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Regular.woff') format('woff'),
+    url('fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url('fonts/ProximaNova-Semibold.eot');
+  src: local('fonts/Proxima Nova Semibold'), local('fonts/ProximaNova-Semibold'),
+    url('fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('fonts/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('fonts/ProximaNova-Light.eot');
+  src: local('fonts/Proxima Nova Light'), local('fonts/ProximaNova-Light'),
+    url('fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Light.woff') format('woff'),
+    url('fonts/ProximaNova-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* container */
+
+.container {
+  width: 1532px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header__background {
+  background-color: rgba(10,14,52,0.7);
+}
+
+.header__background__image {
+  background: url("images/header/back.jpg") center no-repeat;
+  -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+  background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+}
+
+.header__wrapper {
+
+}
+
+.header__logo {
+  display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись */
+  max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
+}
+
+.header__toptext {
+  font-family: 'Proxima Nova Light';
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  float: right;
+}
+
+.header__text1 {
+  font-family: 'Proxima Nova Bold';
+  font-size: 90px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align-last: left;
+}
+
+.header__text2 {
+  font-family: 'Proxima Nova Bold';
+  font-size: 90px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.header__subtext__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 566px;
+  letter-spacing: 0.05em;
+}
+
+.header__subtext {
+  font-family: 'Proxima Nova Light';
+  font-size: 14px;
+  color: #9071ea;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
