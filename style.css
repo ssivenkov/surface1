@@ -34,7 +34,8 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  line-height: 1;
+  letter-spacing: 0.05em;
+  /* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
   font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -137,6 +138,7 @@ h6 {
 /* intro */
 
 .intro {
+	display: block;
   padding: 0 7%;
   width: 100%; /* ширина = 100% от ширины родителя */
   height: 100vh; /* занимать 100% высоты экрана пользователя */
@@ -212,7 +214,7 @@ h6 {
 	margin-top: 20px;
 	margin-left: auto;
 	display: block;
-	max-width: 497px;
+	max-width: 500px;
 	text-align: center;
   /* display: flex;
   justify-content: space-between;
@@ -288,6 +290,7 @@ h6 {
 }
 
 @media (max-width: 817px) {
+
 	.intro__text1 {
 	  font-family: 'Proxima Nova Bold';
 	  font-size: 11vw;
@@ -331,27 +334,113 @@ h6 {
 	}
 }
 
-
 /* athlet */
 
-.footballer {
-	/* display: block; */
-	padding-top: 3%; /* 41px */
-	padding-right: 50%;
-	padding-left: 10%;
+.footballer img {
 	max-width: 100%;
+	width: 50%;
+	height: 100%;
+	object-fit: contain;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 2.2%;
+	position: absolute;
+  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+  -moz-user-select: none; /* для мозиллы */
+  -webkit-user-select: none; /* для сафари и хрома */
 }
 
-.half {
-	display: block;
-	color: #fff;
-	font-family: 'Proxima Nova Light';
-  font-size: 27px;
-  text-transform: uppercase;
-	position: absolute;
+.athlets__header-container {
 	margin-left: 50%;
-	background-color: #333;
-	opacity: 0.5;
-	width: 50%;
+	padding-top: 5%;
+}
+
+.headertext {
+	color: #e7e7e7;
+	font-family: 'Proxima Nova Bold';
+  font-size: 90px;
+  text-transform: uppercase;
+}
+
+.athlets__container {} /* для :nth-child */
+
+.athlets__item {
+	padding: 5% 13% 5% 50%; /* по часовой стрелке начиная с верха */
+	width: 100%;
+}
+
+.athlets__item:nth-child(1) {
+	background: none;
+}
+
+.athlets__item:nth-child(2) {
+	background-color: #f6f4fa;
+}
+
+.athlets__item:nth-child(3) {
+	padding: 5% 15% 5% 50%; /* по часовой стрелке начиная с верха */
+	background-color: #5e42b0;
+}
+
+.athets__number, .athets__number3 {
+	display: inline-block;
+	color: #000;
+	font-family: 'Proxima Nova Bold';
+  font-size: 18px;
+  vertical-align: top; /* выравниваем текст по верхней границе */
+  line-height: 1;
+}
+
+/* псевдоэлемент последнего потомка элемента (полоска) */
+.athets__number:after {
+	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 3px;
+	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
+	background-color: #5e42b0; /* цвет полоски */
+}
+
+.athets__number3:after {
+	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 3px;
+	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
+	background-color: #efefef; /* цвет полоски */
+}
+
+.athlets__header {
+	display: inline-block;
+	color: #c1c1c1;
+	font-family: 'Proxima Nova Bold';
+  font-size: 36px;
+  text-transform: uppercase;
+  padding-left: 8px;
+	font-family: 'Proxima Nova Bold';
+	line-height: 0.85; /* выравниваем по верхней границе заголовок с цифрой */
+}
+
+.athlets__paragraph {
+	color: #000;
+	font-family: 'Proxima Nova Regular';
+  font-size: 20px;
+  margin-top: 22px;
+  line-height: 28px;
+}
+
+.whitetext {
+	color: #fff;
+}
+
+/* players */
+
+.players__header-container {
+	margin-left: 17%;
+	padding-top: 6%;
 }
 
