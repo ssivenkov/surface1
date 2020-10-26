@@ -34,7 +34,6 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  letter-spacing: 0.05em;
   /* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
   font-size: 14px;
   -ms-text-size-adjust: 100%;
@@ -130,7 +129,6 @@ h6 {
 /* container */
 
 .container {
-  width: 100%;
   max-width: 1532px; /* растягиваться максимум до этого значения */
   margin: 0 auto;
 }
@@ -289,6 +287,8 @@ h6 {
 	font-family: 'Proxima Nova Semibold';
 }
 
+.section_container {}
+
 @media (max-width: 817px) {
 
 	.intro__text1 {
@@ -360,6 +360,7 @@ h6 {
 	font-family: 'Proxima Nova Bold';
   font-size: 90px;
   text-transform: uppercase;
+  line-height: 60px;
 }
 
 .athlets__container {} /* для :nth-child */
@@ -382,17 +383,18 @@ h6 {
 	background-color: #5e42b0;
 }
 
-.athets__number, .athets__number3 {
+.number, .number3 {
 	display: inline-block;
 	color: #000;
 	font-family: 'Proxima Nova Bold';
   font-size: 18px;
   vertical-align: top; /* выравниваем текст по верхней границе */
   line-height: 1;
+  letter-spacing: 0.05em;
 }
 
 /* псевдоэлемент последнего потомка элемента (полоска) */
-.athets__number:after {
+.number:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
   display: block;
   width: 50px;
@@ -403,7 +405,7 @@ h6 {
 	background-color: #5e42b0; /* цвет полоски */
 }
 
-.athets__number3:after {
+.number3:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
   display: block;
   width: 50px;
@@ -414,23 +416,33 @@ h6 {
 	background-color: #efefef; /* цвет полоски */
 }
 
-.athlets__header {
+.header {
 	display: inline-block;
 	color: #c1c1c1;
 	font-family: 'Proxima Nova Bold';
   font-size: 36px;
   text-transform: uppercase;
   padding-left: 8px;
-	font-family: 'Proxima Nova Bold';
+	letter-spacing: 0.05em;
 	line-height: 0.85; /* выравниваем по верхней границе заголовок с цифрой */
 }
 
-.athlets__paragraph {
+.paragraph {
 	color: #000;
 	font-family: 'Proxima Nova Regular';
   font-size: 20px;
   margin-top: 22px;
   line-height: 28px;
+  letter-spacing: 0.05em;
+}
+
+.paragraph3 {
+	color: #000;
+	font-family: 'Proxima Nova Regular';
+  font-size: 20px;
+  margin-top: 22px;
+  line-height: 34.49px;
+  letter-spacing: 0.05em;
 }
 
 .whitetext {
@@ -439,8 +451,46 @@ h6 {
 
 /* players */
 
+.players {
+	position: relative; /* для сдвига абсолютно позиционированной картинки */
+}
+
+.basketball img {
+	max-width: 100%;
+	object-fit: contain;
+	padding-left: 40%;
+	padding-right: 6%;
+	top: -25px;
+	position: absolute;
+  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+  -moz-user-select: none; /* для мозиллы */
+  -webkit-user-select: none; /* для сафари и хрома */
+}
+
 .players__header-container {
-	margin-left: 17%;
+	margin-left: 15%;
 	padding-top: 6%;
 }
+
+.players__container {} /* для :nth-child */
+
+.players__item {
+	padding: 5% 49% 5% 15%; /* по часовой стрелке начиная с верха */
+	width: 100%;
+}
+
+.players__item:nth-child(1) {
+	background: none;
+}
+
+.players__item:nth-child(2) {
+	background-color: #f5f6f7;
+}
+
+.players__item:nth-child(3) {
+	padding: 5% 50% 5% 15%; /* по часовой стрелке начиная с верха */
+	background-color: #0a0e34;
+}
+
+/* be active */
 
