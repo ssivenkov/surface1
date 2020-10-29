@@ -494,3 +494,139 @@ h6 {
 
 /* be active */
 
+.cards_container {
+	width: 100%;
+	display: flex;
+	justify-self: space-between;
+}
+
+.cards__left1 {
+	background: url(images/cards/1.jpg) center center no-repeat;
+	width: 50%;
+	max-width: 50%;
+	max-height: 730px;
+}
+
+.cards__left2 {
+	background: url(images/cards/2.jpg) center center no-repeat;
+	width: 50%;
+	max-width: 50%;
+	max-height: 730px;
+}
+
+.cards__left3 {
+	background: url(images/cards/3.jpg) center center no-repeat;
+	width: 50%;
+	max-width: 50%;
+	max-height: 730px;
+}
+
+.cards__right {
+	padding-left: 8.4%;
+	/* padding-right: 15%; */
+	width: 50%;
+	max-width: 50%;
+}
+
+.cards__headertext__container {
+	margin-top: 33%;
+}
+
+.cards__paragraph__container {
+	margin-top: 14.7%;
+}
+
+.cards__paragraph__container3 {
+	margin-top: 10%;
+}
+
+.cards__paragraph {
+	color: #000;
+	font-family: 'Proxima Nova Regular';
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  padding-right: 51%;
+}
+
+.cards__paragraph3 {
+	color: #000;
+	font-family: 'Proxima Nova Regular';
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  padding-right: 27%;
+}
+
+.cards__headertext {
+	display: inline;
+	color: #e7e7e7;
+	font-family: 'Proxima Nova Bold';
+  font-size: 90px;
+  text-transform: uppercase;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1179px) {
+	.cards__headertext {
+		color: #e7e7e7;
+		font-family: 'Proxima Nova Bold';
+	  font-size: 7.6vw;
+	  text-transform: uppercase;
+	  line-height: 60px;
+	  white-space: nowrap;
+	}
+}
+
+.cards__line {
+  max-width: 22px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 84px;
+  margin-bottom: 122px;
+	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
+	background-color: #5e42b0; /* цвет полоски */
+}
+
+.cards__number__block {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.cards__number__container {
+	position: absolute;
+	background-color: #5e42b0;
+	width: 168px;
+	height: 155px;
+	display: flex;
+	justify-content: center; /* горизонтальное выравнивание */
+	align-items: center; /* вертикальное выравнивание */
+	top: 211px;
+}
+
+.number4 {
+	display: inline-block;
+	color: #f5f6f7;
+	font-family: 'Proxima Nova Bold';
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.number4:after {
+	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 3px;
+	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
+	background-color: #8f7bc8; /* цвет полоски */
+	color: #f5f6f7;
+}
+
+/* footer */
+
