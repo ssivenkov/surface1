@@ -159,6 +159,9 @@ h6 {
 .intro__logo {
   display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
   max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
+  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+  -moz-user-select: none; /* для мозиллы */
+  -webkit-user-select: none; /* для сафари и хрома */
 }
 
 .intro__toptext {
@@ -171,7 +174,7 @@ h6 {
 }
 
 .intro__text__wrapper {
-	margin-top: 26vh;
+	margin-top: 16vw;
 	/* не подходит - при маленькой высоте вьюпорта отступ слишком велик
 	padding-top: 20%;
 	*/
@@ -321,15 +324,16 @@ h6 {
 
 	.market__wrapper {
 		margin: 0 auto;
-		margin-top: 8%;
+		margin-top: 15%;
 		max-width: 100%;
 		display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 	}
 
 	.market__android {
-		margin-top: 6%;
+		margin-top: 10%; /* 6 */
 		max-width: 100%;
 	}
 }
@@ -630,3 +634,140 @@ h6 {
 
 /* footer */
 
+.footer {
+	width: 100%;
+	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/footer/bg.jpg");
+  -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+  background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__container {
+	width: 100%;
+	max-width: 100%;
+}
+
+.footer__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 9.6%;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.footer__icon {
+	max-width: 100%;
+	padding-right: 33px;
+	padding-left: 70px;
+  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+  -moz-user-select: none; /* для мозиллы */
+  -webkit-user-select: none; /* для сафари и хрома */
+}
+
+.footer__title {
+	text-transform: uppercase;
+	color: #fff;
+  font-size: 90px;
+  font-family: "Proxima Nova Bold";
+  line-height: 85px;
+  letter-spacing: 0.05em;
+}
+
+.footer__subtitle {
+	display: block;
+	text-transform: uppercase;
+	color: #a496ca;
+  font-size: 36px;
+  font-family: "Proxima Nova Bold";
+  line-height: 34.49px;
+}
+
+@media (max-width: 945px) {
+	.footer__title {
+	  font-size: 9.5vw;
+	}
+
+	.footer__subtitle {
+ 		font-size: 3.8vw;
+	}
+}
+
+.footer__market__wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 672px;
+	margin: 0 auto;
+	margin-top: 8.2%;
+}
+
+@media (max-width: 817px) {
+	.footer__market__wrapper {
+		margin: 0 auto;
+		margin-top: 8%;
+		max-width: 100%;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	}
+}
+
+.footer__contacts {
+	margin-top: 10.7%;
+	height: 168px;
+	padding-right: 50px;
+	padding-left: 50px;
+	position: relative;
+	background-color: rgba(10,14,52,.6);
+}
+
+.footer__contacts__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.footer__links {
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Proxima Nova Regular';
+	letter-spacing: 0.05em;
+}
+
+.footer__social {
+	position: absolute;
+	left: 50%;
+	margin-left: -70px;
+	top: 42%;
+}
+
+.fab {
+	font-size: 27px;
+	color: #fff;
+	margin-right: 35px;
+}
+
+.fab:last-child {
+	padding-right: 0;
+}
+
+@media (max-width: 945px) {
+	.footer__social {
+		position: static;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.fab {
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+
+	.fab:last-child {
+		padding-right: 0;
+	}
+}
