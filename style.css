@@ -136,10 +136,8 @@ h6 {
 /* intro */
 
 .intro {
-	display: block;
+	min-height: 100vh; /* занимать 100% высоты экрана пользователя */
   padding: 0 7%;
-  width: 100%; /* ширина = 100% от ширины родителя */
-  height: 100vh; /* занимать 100% высоты экрана пользователя */
   background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
   -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
   background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
@@ -152,6 +150,7 @@ h6 {
 .intro__wrapper {
   padding-top: 50px;
   display: flex;
+  position: relative;
   justify-content: space-between; /* разводим родительские блоки по краям контейнера */
   align-items: center; /* центрируем контент родительских блоков по центру */
 }
@@ -174,7 +173,7 @@ h6 {
 }
 
 .intro__text__wrapper {
-	margin-top: 16vw;
+	margin-top: 5vh;
 	/* не подходит - при маленькой высоте вьюпорта отступ слишком велик
 	padding-top: 20%;
 	*/
@@ -239,11 +238,18 @@ h6 {
 }
 
 .market__wrapper {
+	/* width: 100%;
+	position: absolute;
+	bottom: 0
+	left: 0;
+	z-index: 1;
+	*/
 	display: flex;
 	justify-content: space-between;
 	width: 672px;
 	margin: 0 auto;
-	margin-top: 11%;
+	margin-top: 15vh;
+	padding-bottom: 8vh;
 }
 
 .market__ios {
@@ -290,10 +296,7 @@ h6 {
 	font-family: 'Proxima Nova Semibold';
 }
 
-.section_container {}
-
 @media (max-width: 817px) {
-
 	.intro__text1 {
 	  font-family: 'Proxima Nova Bold';
 	  font-size: 11vw;
@@ -315,7 +318,7 @@ h6 {
 	  display: block;
 	}
 
-	.intro__wrapper {
+		.intro__wrapper {
 	  padding-top: 7.3%;
 	  display: flex;
 	  justify-content: space-between; /* разводим родительские блоки по краям контейнера */
@@ -324,7 +327,7 @@ h6 {
 
 	.market__wrapper {
 		margin: 0 auto;
-		margin-top: 15%;
+		margin-top: 11vh;
 		max-width: 100%;
 		display: flex;
     flex-direction: column;
@@ -336,19 +339,31 @@ h6 {
 		margin-top: 10%; /* 6 */
 		max-width: 100%;
 	}
+
+	.intro__text__wrapper {
+		margin-top: 5vh;
+	}
 }
 
 /* athlet */
 
+.section_container {
+	position: relative;
+}
+
+.footballer__wrapper {
+	position: relative;
+}
+
 .footballer img {
-	max-width: 100%;
-	width: 50%;
-	height: 100%;
+	max-width: 33.4%;
 	object-fit: contain;
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-top: 2.2%;
+	/* left: 13.9%;
+	right: 55.1%; */
+	margin-top: 2.2072%;
+	margin-left: 10%;
 	position: absolute;
+	z-index: 5;
   -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
   -moz-user-select: none; /* для мозиллы */
   -webkit-user-select: none; /* для сафари и хрома */
@@ -356,7 +371,8 @@ h6 {
 
 .athlets__header-container {
 	margin-left: 50%;
-	padding-top: 5%;
+	padding-top: 6.1%;
+	margin-bottom: 28px;
 }
 
 .headertext {
@@ -370,26 +386,40 @@ h6 {
 .athlets__container {} /* для :nth-child */
 
 .athlets__item {
-	padding: 5% 13% 5% 50%; /* по часовой стрелке начиная с верха */
 	width: 100%;
 }
 
 .athlets__item:nth-child(1) {
+	padding: 3.25% 13% 3.25% 50%; /* по часовой стрелке начиная с верха */
 	background: none;
+	max-height: 202px;
 }
 
 .athlets__item:nth-child(2) {
+	padding: 3.18% 13% 3.18% 50%; /* по часовой стрелке начиная с верха */
 	background-color: #f6f4fa;
+	max-height: 257px;
 }
 
 .athlets__item:nth-child(3) {
-	padding: 5% 15% 5% 50%; /* по часовой стрелке начиная с верха */
+	padding: 4.66% 15% 4.66% 50%; /* по часовой стрелке начиная с верха */
 	background-color: #5e42b0;
+	max-height: 297px;
 }
 
-.number, .number3 {
+.number, .number2 {
 	display: inline-block;
 	color: #000;
+	font-family: 'Proxima Nova Bold';
+  font-size: 18px;
+  vertical-align: top; /* выравниваем текст по верхней границе */
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.number3 {
+	display: inline-block;
+	color: #9173e6;
 	font-family: 'Proxima Nova Bold';
   font-size: 18px;
   vertical-align: top; /* выравниваем текст по верхней границе */
@@ -407,6 +437,17 @@ h6 {
   margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #5e42b0; /* цвет полоски */
+}
+
+.number2:after {
+	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+  display: block;
+  width: 50px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 3px;
+	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
+	background-color: #efefef; /* цвет полоски */
 }
 
 .number3:after {
@@ -461,39 +502,44 @@ h6 {
 
 .basketball img {
 	max-width: 100%;
-	object-fit: contain;
-	padding-left: 40%;
-	padding-right: 6%;
+	/* padding-left: 40%;
+	padding-right: 6%; */
 	top: -25px;
+	left: 40vw;
 	position: absolute;
   -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
   -moz-user-select: none; /* для мозиллы */
   -webkit-user-select: none; /* для сафари и хрома */
+  clip-path: polygon(-3% 26%, 34% 20%, 71% -26%, 122% 64%, 100% 104%, 65% 87%, 43% 100%, 40% 87%, 37% 30%, 6% 39%);
 }
 
 .players__header-container {
 	margin-left: 15%;
-	padding-top: 6%;
+	padding-top: 6.1%;
+	margin-bottom: 21px;
 }
 
 .players__container {} /* для :nth-child */
 
 .players__item {
-	padding: 5% 49% 5% 15%; /* по часовой стрелке начиная с верха */
+	padding: 3.7% 53% 3.7% 14.474%; /* по часовой стрелке начиная с верха */
 	width: 100%;
 }
 
 .players__item:nth-child(1) {
 	background: none;
+	max-height: 247px;
 }
 
 .players__item:nth-child(2) {
 	background-color: #f5f6f7;
+	max-height: 247px;
 }
 
 .players__item:nth-child(3) {
-	padding: 5% 50% 5% 15%; /* по часовой стрелке начиная с верха */
+	padding: 5% 50% 5% 14.474%; /* по часовой стрелке начиная с верха */
 	background-color: #0a0e34;
+	max-height: 268px;
 }
 
 /* be active */
@@ -588,7 +634,7 @@ h6 {
   height: 5px;
   border-radius: 3px;
   margin-top: 84px;
-  margin-bottom: 122px;
+  margin-bottom: 117px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #5e42b0; /* цвет полоски */
 }
