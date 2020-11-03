@@ -136,7 +136,7 @@ h6 {
 /* intro */
 
 .intro {
-	min-height: 100vh; /* занимать 100% высоты экрана пользователя */
+  min-height: 100vh; /* занимать 100% высоты экрана пользователя */
   padding: 0 7%;
   background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
   -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
@@ -173,7 +173,7 @@ h6 {
 }
 
 .intro__text__wrapper {
-	margin-top: 5vh;
+	margin-top: 20vmin;
 	/* не подходит - при маленькой высоте вьюпорта отступ слишком велик
 	padding-top: 20%;
 	*/
@@ -296,6 +296,18 @@ h6 {
 	font-family: 'Proxima Nova Semibold';
 }
 
+@media (max-width: 1278px) {
+
+  .intro__text__wrapper {
+    margin-top: 5vh;
+  }
+
+  .market__wrapper {
+    margin-top: 11vh;
+    padding-bottom: 8vh;
+  }
+}
+
 @media (max-width: 817px) {
 	.intro__text1 {
 	  font-family: 'Proxima Nova Bold';
@@ -348,10 +360,6 @@ h6 {
 /* athlet */
 
 .section_container {
-	position: relative;
-}
-
-.footballer__wrapper {
 	position: relative;
 }
 
@@ -415,6 +423,7 @@ h6 {
   vertical-align: top; /* выравниваем текст по верхней границе */
   line-height: 1;
   letter-spacing: 0.05em;
+  padding-right: 8px;
 }
 
 .number3 {
@@ -425,6 +434,7 @@ h6 {
   vertical-align: top; /* выравниваем текст по верхней границе */
   line-height: 1;
   letter-spacing: 0.05em;
+  padding-right: 8px;
 }
 
 /* псевдоэлемент последнего потомка элемента (полоска) */
@@ -467,7 +477,6 @@ h6 {
 	font-family: 'Proxima Nova Bold';
   font-size: 36px;
   text-transform: uppercase;
-  padding-left: 8px;
 	letter-spacing: 0.05em;
 	line-height: 0.85; /* выравниваем по верхней границе заголовок с цифрой */
 }
@@ -501,19 +510,29 @@ h6 {
 }
 
 .basketball img {
-	max-width: 100%;
-	/* padding-left: 40%;
-	padding-right: 6%; */
-	top: -25px;
-	left: 40vw;
+	max-width: 58%;
+  object-fit: contain;
+  margin-left: 40%;
+	margin-top: -25px;
 	position: absolute;
+  z-index: 5;
   -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
   -moz-user-select: none; /* для мозиллы */
   -webkit-user-select: none; /* для сафари и хрома */
-  clip-path: polygon(-3% 26%, 34% 20%, 71% -26%, 122% 64%, 100% 104%, 65% 87%, 43% 100%, 40% 87%, 37% 30%, 6% 39%);
+
 }
 
-.players__header-container {
+@media (max-width: 1075px) {
+  .basketball img {
+    max-width: 58%;
+    margin-left: 40%;
+    margin-top: 0.5vw;
+  }
+}
+
+
+.players__header__сontainer {
+  display: inline-block;
 	margin-left: 15%;
 	padding-top: 6.1%;
 	margin-bottom: 21px;
