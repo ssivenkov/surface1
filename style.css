@@ -296,67 +296,6 @@ h6 {
 	font-family: 'Proxima Nova Semibold';
 }
 
-@media (max-width: 1278px) {
-
-  .intro__text__wrapper {
-    margin-top: 5vh;
-  }
-
-  .market__wrapper {
-    margin-top: 11vh;
-    padding-bottom: 8vh;
-  }
-}
-
-@media (max-width: 817px) {
-	.intro__text1 {
-	  font-family: 'Proxima Nova Bold';
-	  font-size: 11vw;
-	  color: #fff;
-	  text-transform: uppercase;
-	  letter-spacing: 0.05em;
-	  text-align: left;
-	  display: block; /* перенос неуместен */
-	  white-space: nowrap;
-	}
-
-	.intro__text2 {
-	  font-family: 'Proxima Nova Bold';
-	  font-size: 11vw;
-	  color: #fff;
-	  text-transform: uppercase;
-	  letter-spacing: 0.05em;
-	  text-align: right;
-	  display: block;
-	}
-
-		.intro__wrapper {
-	  padding-top: 7.3%;
-	  display: flex;
-	  justify-content: space-between; /* разводим родительские блоки по краям контейнера */
-	  align-items: center; /* центрируем контент родительских блоков по центру */
-	}
-
-	.market__wrapper {
-		margin: 0 auto;
-		margin-top: 11vh;
-		max-width: 100%;
-		display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	}
-
-	.market__android {
-		margin-top: 10%; /* 6 */
-		max-width: 100%;
-	}
-
-	.intro__text__wrapper {
-		margin-top: 5vh;
-	}
-}
-
 /* athlet */
 
 .section_container {
@@ -423,7 +362,7 @@ h6 {
   vertical-align: top; /* выравниваем текст по верхней границе */
   line-height: 1;
   letter-spacing: 0.05em;
-  padding-right: 8px;
+  margin-right: 8px;
 }
 
 .number3 {
@@ -434,7 +373,7 @@ h6 {
   vertical-align: top; /* выравниваем текст по верхней границе */
   line-height: 1;
   letter-spacing: 0.05em;
-  padding-right: 8px;
+  margin-right: 8px;
 }
 
 /* псевдоэлемент последнего потомка элемента (полоска) */
@@ -519,17 +458,7 @@ h6 {
   -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
   -moz-user-select: none; /* для мозиллы */
   -webkit-user-select: none; /* для сафари и хрома */
-
 }
-
-@media (max-width: 1075px) {
-  .basketball img {
-    max-width: 58%;
-    margin-left: 40%;
-    margin-top: 0.5vw;
-  }
-}
-
 
 .players__header__сontainer {
   display: inline-block;
@@ -559,6 +488,11 @@ h6 {
 	padding: 5% 50% 5% 14.474%; /* по часовой стрелке начиная с верха */
 	background-color: #0a0e34;
 	max-height: 268px;
+}
+
+.players__header {
+  padding: 3.7% 53% 1% 14.474%; /* по часовой стрелке начиная с верха */
+  width: 100%;
 }
 
 /* be active */
@@ -635,17 +569,6 @@ h6 {
   text-transform: uppercase;
   line-height: 60px;
   white-space: nowrap;
-}
-
-@media (max-width: 1179px) {
-	.cards__headertext {
-		color: #e7e7e7;
-		font-family: 'Proxima Nova Bold';
-	  font-size: 7.6vw;
-	  text-transform: uppercase;
-	  line-height: 60px;
-	  white-space: nowrap;
-	}
 }
 
 .cards__line {
@@ -750,16 +673,6 @@ h6 {
   line-height: 34.49px;
 }
 
-@media (max-width: 945px) {
-	.footer__title {
-	  font-size: 9.5vw;
-	}
-
-	.footer__subtitle {
- 		font-size: 3.8vw;
-	}
-}
-
 .footer__market__wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -768,17 +681,6 @@ h6 {
 	margin-top: 8.2%;
 }
 
-@media (max-width: 817px) {
-	.footer__market__wrapper {
-		margin: 0 auto;
-		margin-top: 8%;
-		max-width: 100%;
-		display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	}
-}
 
 .footer__contacts {
 	margin-top: 10.7%;
@@ -820,6 +722,8 @@ h6 {
 	padding-right: 0;
 }
 
+/* 1920 */
+
 @media (max-width: 945px) {
 	.footer__social {
 		position: static;
@@ -836,3 +740,108 @@ h6 {
 		padding-right: 0;
 	}
 }
+
+@media (max-width: 1278px) {
+
+  .intro__text__wrapper {
+    margin-top: 5vh;
+  }
+
+  .market__wrapper {
+    margin-top: 11vh;
+    padding-bottom: 8vh;
+  }
+}
+
+@media (max-width: 817px) {
+  .intro__text1 {
+    font-family: 'Proxima Nova Bold';
+    font-size: 11vw;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    display: block; /* перенос неуместен */
+    white-space: nowrap;
+  }
+
+  .intro__text2 {
+    font-family: 'Proxima Nova Bold';
+    font-size: 11vw;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: right;
+    display: block;
+  }
+
+    .intro__wrapper {
+    padding-top: 7.3%;
+    display: flex;
+    justify-content: space-between; /* разводим родительские блоки по краям контейнера */
+    align-items: center; /* центрируем контент родительских блоков по центру */
+  }
+
+  .market__wrapper {
+    margin: 0 auto;
+    margin-top: 11vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .market__android {
+    margin-top: 10%; /* 6 */
+    max-width: 100%;
+  }
+
+  .intro__text__wrapper {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 1075px) {
+  .basketball img {
+    max-width: 58%;
+    margin-left: 40%;
+    margin-top: 0.5vw;
+  }
+}
+
+@media (max-width: 1179px) {
+  .cards__headertext {
+    color: #e7e7e7;
+    font-family: 'Proxima Nova Bold';
+    font-size: 7.6vw;
+    text-transform: uppercase;
+    line-height: 60px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 945px) {
+  .footer__title {
+    font-size: 9.5vw;
+  }
+
+  .footer__subtitle {
+    font-size: 3.8vw;
+  }
+}
+
+@media (max-width: 817px) {
+  .footer__market__wrapper {
+    margin: 0 auto;
+    margin-top: 8%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 768 */
+
