@@ -490,7 +490,7 @@ h6 {
 	max-height: 268px;
 }
 
-.players__header {
+.players__headertitle {
   padding: 3.7% 53% 1% 14.474%; /* по часовой стрелке начиная с верха */
   width: 100%;
 }
