@@ -1,74 +1,74 @@
 /* обнуление стилей */
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :focus,
 :active {
-  outline: none;
+	outline: none;
 }
 a:focus,
 a:active {
-  outline: none;
+	outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-  display: block;
+	display: block;
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  /* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	/* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 input::-ms-clear {
-  display: none;
+	display: none;
 }
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 ul li {
-  list-style: none;
+	list-style: none;
 }
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
 h1,
 h2,
@@ -76,134 +76,134 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+	font-size: inherit;
+	font-weight: 400;
 }
 
 /* fonts */
 
 @font-face {
-  font-family: 'Proxima Nova Bold';
-  src: url('fonts/ProximaNova-Bold.eot');
-  src: local('fonts/Proxima Nova Bold'), local('fonts/ProximaNova-Bold'),
-    url('fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ProximaNova-Bold.woff') format('woff'),
-    url('fonts/ProximaNova-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Proxima Nova Bold';
+	src: url('fonts/ProximaNova-Bold.eot');
+	src: local('fonts/Proxima Nova Bold'), local('fonts/ProximaNova-Bold'),
+	url('fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova-Bold.woff') format('woff'),
+	url('fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Regular';
-  src: url('fonts/ProximaNova-Regular.eot');
-  src: local('fonts/Proxima Nova Regular'), local('fonts/ProximaNova-Regular'),
-    url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ProximaNova-Regular.woff') format('woff'),
-    url('fonts/ProximaNova-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Proxima Nova Regular';
+	src: url('fonts/ProximaNova-Regular.eot');
+	src: local('fonts/Proxima Nova Regular'), local('fonts/ProximaNova-Regular'),
+	url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova-Regular.woff') format('woff'),
+	url('fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Semibold';
-  src: url('fonts/ProximaNova-Semibold.eot');
-  src: local('fonts/Proxima Nova Semibold'), local('fonts/ProximaNova-Semibold'),
-    url('fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ProximaNova-Semibold.woff') format('woff'),
-    url('fonts/ProximaNova-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Proxima Nova Semibold';
+	src: url('fonts/ProximaNova-Semibold.eot');
+	src: local('fonts/Proxima Nova Semibold'), local('fonts/ProximaNova-Semibold'),
+	url('fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova-Semibold.woff') format('woff'),
+	url('fonts/ProximaNova-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Light';
-  src: url('fonts/ProximaNova-Light.eot');
-  src: local('fonts/Proxima Nova Light'), local('fonts/ProximaNova-Light'),
-    url('fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ProximaNova-Light.woff') format('woff'),
-    url('fonts/ProximaNova-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+	font-family: 'Proxima Nova Light';
+	src: url('fonts/ProximaNova-Light.eot');
+	src: local('fonts/Proxima Nova Light'), local('fonts/ProximaNova-Light'),
+	url('fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova-Light.woff') format('woff'),
+	url('fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
 }
 
 /* container */
 
 .container {
-  max-width: 1532px; /* растягиваться максимум до этого значения */
-  margin: 0 auto;
+	max-width: 1532px; /* растягиваться максимум до этого значения */
+	margin: 0 auto;
 }
 
 /* intro */
 
 .intro {
-  min-height: 100vh; /* занимать 100% высоты экрана пользователя */
-  padding: 0 7%;
-  background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
-  -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
-  background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
-  background-blend-mode: normal;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background: center no-repeat; - такая запись мешает наложению цвета на фоновую картинку */
+	min-height: 100vh; /* занимать 100% высоты экрана пользователя */
+	padding: 0 7%;
+	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
+	-webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+	background-blend-mode: normal;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background: center no-repeat; - такая запись мешает наложению цвета на фоновую картинку */
 }
 
 .intro__wrapper {
-  padding-top: 50px;
-  display: flex;
-  position: relative;
-  justify-content: space-between; /* разводим родительские блоки по краям контейнера */
-  align-items: center; /* центрируем контент родительских блоков по центру */
+	padding-top: 50px;
+	display: flex;
+	position: relative;
+	justify-content: space-between; /* разводим родительские блоки по краям контейнера */
+	align-items: center; /* центрируем контент родительских блоков по центру */
 }
 
 .intro__logo {
-  display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
-  max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
-  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-  -moz-user-select: none; /* для мозиллы */
-  -webkit-user-select: none; /* для сафари и хрома */
+	display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
+	max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
+	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* для мозиллы */
+	-webkit-user-select: none; /* для сафари и хрома */
 }
 
 .intro__toptext {
-  font-family: 'Proxima Nova Light';
-  font-size: 14px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: right;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	text-align: right;
 }
 
 .intro__text__wrapper {
-	margin-top: 20vmin;
+	margin-top: 19vmin;
 	/* не подходит - при маленькой высоте вьюпорта отступ слишком велик
 	padding-top: 20%;
 	*/
 	/* не подходит - текст вылазит за контейнер и к нему не крепится мелкий текст
 	position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  padding: 0 7%; /* поскольку position absolute сбил работу контейнера, выравниваем так */
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	padding: 0 7%; /* поскольку position absolute сбил работу контейнера, выравниваем так */
 }
 
 .intro__text1 {
-  font-family: 'Proxima Nova Bold';
-  font-size: 90px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: left;
-  display: block;
+	font-family: 'Proxima Nova Bold';
+	font-size: 90px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	text-align: left;
+	display: block;
 }
 
 .intro__text2 {
-  font-family: 'Proxima Nova Bold';
-  font-size: 90px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: right;
-  display: block;
+	font-family: 'Proxima Nova Bold';
+	font-size: 90px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	text-align: right;
+	display: block;
 }
 
 .no_wrap {
@@ -216,21 +216,20 @@ h6 {
 	display: block;
 	max-width: 500px;
 	text-align: center;
-  /* display: flex;
-  justify-content: space-between;
-  width: 567px;
-  letter-spacing: 0.05em; */
+	/* display: flex;
+	justify-content: space-between;
+	width: 567px; */
 }
 
 .intro__subtext {
 	display: inline; /* иначе надписи начинаются с новой строки */
-  font-family: 'Proxima Nova Light';
-  font-size: 14px;
-  color: #9071ea;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding-right: 25px;
-  white-space: nowrap;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	color: #9071ea;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	padding-right: 25px;
+	white-space: nowrap;
 }
 
 .intro__subtext:last-child {
@@ -253,43 +252,43 @@ h6 {
 }
 
 .market__ios {
-  border-radius: 38px;
-  background: rgb(94,66,176) url(images/header/IconApple.png) 43px 19px/33px 37px no-repeat;
-  box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
-  width: 311px;
-  height: 77px;
+	border-radius: 38px;
+	background: rgb(94,66,176) url(images/header/IconApple.png) 43px 19px/33px 37px no-repeat;
+	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
+	width: 311px;
+	height: 77px;
 }
 
 .market__android {
-  border-radius: 38px;
-  background: rgb(94,66,176) url(images/header/IconGooglePlay.png) 64px center/36px 39px no-repeat;
-  box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
-  width: 311px;
-  height: 77px;
+	border-radius: 38px;
+	background: rgb(94,66,176) url(images/header/IconGooglePlay.png) 64px center/36px 39px no-repeat;
+	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
+	width: 311px;
+	height: 77px;
 }
 
 .market__text__ios {
 	text-decoration: none;
-  letter-spacing: 0.05em;
-  font-family: 'Proxima Nova Light';
-  font-size: 14px;
-  line-height: 1.15em;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 23px 0 0 105px; /* неудобно подгонять вручную, должны быть способы проще */
-  display: block;
+	letter-spacing: 0.05em;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	line-height: 1.15em;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 23px 0 0 105px; /* неудобно подгонять вручную, должны быть способы проще */
+	display: block;
 }
 
 .market__text__android {
 	text-decoration: none;
-  letter-spacing: 0.05em;
-  font-family: 'Proxima Nova Light';
-  font-size: 14px;
-  line-height: 1.15em;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 23px 0 0 126px; /* неудобно подгонять вручную, должны быть способы проще */
-  display: block;
+	letter-spacing: 0.05em;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	line-height: 1.15em;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 23px 0 0 126px; /* неудобно подгонять вручную, должны быть способы проще */
+	display: block;
 }
 
 .market__semibold {
@@ -311,9 +310,9 @@ h6 {
 	margin-left: 10%;
 	position: absolute;
 	z-index: 5;
-  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-  -moz-user-select: none; /* для мозиллы */
-  -webkit-user-select: none; /* для сафари и хрома */
+	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* для мозиллы */
+	-webkit-user-select: none; /* для сафари и хрома */
 }
 
 .athlets__header-container {
@@ -325,9 +324,9 @@ h6 {
 .headertext {
 	color: #e7e7e7;
 	font-family: 'Proxima Nova Bold';
-  font-size: 90px;
-  text-transform: uppercase;
-  line-height: 60px;
+	font-size: 90px;
+	text-transform: uppercase;
+	line-height: 60px;
 }
 
 .athlets__container {} /* для :nth-child */
@@ -358,54 +357,54 @@ h6 {
 	display: inline-block;
 	color: #000;
 	font-family: 'Proxima Nova Bold';
-  font-size: 18px;
-  vertical-align: top; /* выравниваем текст по верхней границе */
-  line-height: 1;
-  letter-spacing: 0.05em;
-  margin-right: 8px;
+	font-size: 18px;
+	vertical-align: top; /* выравниваем текст по верхней границе */
+	line-height: 1;
+	letter-spacing: 0.05em;
+	margin-right: 8px;
 }
 
 .number3 {
 	display: inline-block;
 	color: #9173e6;
 	font-family: 'Proxima Nova Bold';
-  font-size: 18px;
-  vertical-align: top; /* выравниваем текст по верхней границе */
-  line-height: 1;
-  letter-spacing: 0.05em;
-  margin-right: 8px;
+	font-size: 18px;
+	vertical-align: top; /* выравниваем текст по верхней границе */
+	line-height: 1;
+	letter-spacing: 0.05em;
+	margin-right: 8px;
 }
 
 /* псевдоэлемент последнего потомка элемента (полоска) */
 .number:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
-  display: block;
-  width: 50px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
+	display: block;
+	width: 50px;
+	height: 5px;
+	border-radius: 3px;
+	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #5e42b0; /* цвет полоски */
 }
 
 .number2:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
-  display: block;
-  width: 50px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
+	display: block;
+	width: 50px;
+	height: 5px;
+	border-radius: 3px;
+	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #efefef; /* цвет полоски */
 }
 
 .number3:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
-  display: block;
-  width: 50px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
+	display: block;
+	width: 50px;
+	height: 5px;
+	border-radius: 3px;
+	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #efefef; /* цвет полоски */
 }
@@ -414,8 +413,8 @@ h6 {
 	display: inline-block;
 	color: #c1c1c1;
 	font-family: 'Proxima Nova Bold';
-  font-size: 36px;
-  text-transform: uppercase;
+	font-size: 36px;
+	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	line-height: 0.85; /* выравниваем по верхней границе заголовок с цифрой */
 }
@@ -423,19 +422,19 @@ h6 {
 .paragraph {
 	color: #000;
 	font-family: 'Proxima Nova Regular';
-  font-size: 20px;
-  margin-top: 22px;
-  line-height: 28px;
-  letter-spacing: 0.05em;
+	font-size: 20px;
+	margin-top: 22px;
+	line-height: 28px;
+	letter-spacing: 0.05em;
 }
 
 .paragraph3 {
 	color: #000;
 	font-family: 'Proxima Nova Regular';
-  font-size: 20px;
-  margin-top: 22px;
-  line-height: 34.49px;
-  letter-spacing: 0.05em;
+	font-size: 20px;
+	margin-top: 22px;
+	line-height: 34.49px;
+	letter-spacing: 0.05em;
 }
 
 .whitetext {
@@ -450,18 +449,18 @@ h6 {
 
 .basketball img {
 	max-width: 58%;
-  object-fit: contain;
-  margin-left: 40%;
+	object-fit: contain;
+	margin-left: 40%;
 	margin-top: -25px;
 	position: absolute;
-  z-index: 5;
-  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-  -moz-user-select: none; /* для мозиллы */
-  -webkit-user-select: none; /* для сафари и хрома */
+	z-index: 5;
+	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* для мозиллы */
+	-webkit-user-select: none; /* для сафари и хрома */
 }
 
 .players__header__сontainer {
-  display: inline-block;
+	display: inline-block;
 	margin-left: 15%;
 	padding-top: 6.1%;
 	margin-bottom: 21px;
@@ -491,8 +490,8 @@ h6 {
 }
 
 .players__headertitle {
-  padding: 3.7% 53% 1% 14.474%; /* по часовой стрелке начиная с верха */
-  width: 100%;
+	padding: 3.7% 53% 1% 14.474%; /* по часовой стрелке начиная с верха */
+	width: 100%;
 }
 
 /* be active */
@@ -546,37 +545,37 @@ h6 {
 .cards__paragraph {
 	color: #000;
 	font-family: 'Proxima Nova Regular';
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.05em;
-  padding-right: 51%;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.05em;
+	padding-right: 51%;
 }
 
 .cards__paragraph3 {
 	color: #000;
 	font-family: 'Proxima Nova Regular';
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.05em;
-  padding-right: 27%;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.05em;
+	padding-right: 27%;
 }
 
 .cards__headertext {
 	display: inline;
 	color: #e7e7e7;
 	font-family: 'Proxima Nova Bold';
-  font-size: 90px;
-  text-transform: uppercase;
-  line-height: 60px;
-  white-space: nowrap;
+	font-size: 90px;
+	text-transform: uppercase;
+	line-height: 60px;
+	white-space: nowrap;
 }
 
 .cards__line {
-  max-width: 22px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 84px;
-  margin-bottom: 117px;
+	max-width: 22px;
+	height: 5px;
+	border-radius: 3px;
+	margin-top: 84px;
+	margin-bottom: 117px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #5e42b0; /* цвет полоски */
 }
@@ -603,18 +602,18 @@ h6 {
 	display: inline-block;
 	color: #f5f6f7;
 	font-family: 'Proxima Nova Bold';
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0.05em;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.05em;
 }
 
 .number4:after {
 	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
-  display: block;
-  width: 50px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
+	display: block;
+	width: 50px;
+	height: 5px;
+	border-radius: 3px;
+	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
 	background-color: #8f7bc8; /* цвет полоски */
 	color: #f5f6f7;
@@ -625,11 +624,11 @@ h6 {
 .footer {
 	width: 100%;
 	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/footer/bg.jpg");
-  -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
-  background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
-  background-blend-mode: normal;
-  background-repeat: no-repeat;
-  background-position: center;
+	-webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+	background-blend-mode: normal;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .footer__container {
@@ -650,27 +649,27 @@ h6 {
 	max-width: 100%;
 	padding-right: 33px;
 	padding-left: 70px;
-  -ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-  -moz-user-select: none; /* для мозиллы */
-  -webkit-user-select: none; /* для сафари и хрома */
+	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* для мозиллы */
+	-webkit-user-select: none; /* для сафари и хрома */
 }
 
 .footer__title {
 	text-transform: uppercase;
 	color: #fff;
-  font-size: 90px;
-  font-family: "Proxima Nova Bold";
-  line-height: 85px;
-  letter-spacing: 0.05em;
+	font-size: 90px;
+	font-family: "Proxima Nova Bold";
+	line-height: 85px;
+	letter-spacing: 0.05em;
 }
 
 .footer__subtitle {
 	display: block;
 	text-transform: uppercase;
 	color: #a496ca;
-  font-size: 36px;
-  font-family: "Proxima Nova Bold";
-  line-height: 34.49px;
+	font-size: 36px;
+	font-family: "Proxima Nova Bold";
+	line-height: 34.49px;
 }
 
 .footer__market__wrapper {
@@ -743,105 +742,212 @@ h6 {
 
 @media (max-width: 1278px) {
 
-  .intro__text__wrapper {
-    margin-top: 5vh;
-  }
+	.intro__text__wrapper {
+		margin-top: 5vh;
+	}
 
-  .market__wrapper {
-    margin-top: 11vh;
-    padding-bottom: 8vh;
-  }
+	.market__wrapper {
+		margin-top: 11vh;
+		padding-bottom: 8vh;
+	}
 }
 
 @media (max-width: 817px) {
-  .intro__text1 {
-    font-family: 'Proxima Nova Bold';
-    font-size: 11vw;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-align: left;
-    display: block; /* перенос неуместен */
-    white-space: nowrap;
-  }
+	.intro__text1 {
+		font-family: 'Proxima Nova Bold';
+		font-size: 11vw;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-align: left;
+		display: block; /* перенос неуместен */
+		white-space: nowrap;
+	}
 
-  .intro__text2 {
-    font-family: 'Proxima Nova Bold';
-    font-size: 11vw;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-align: right;
-    display: block;
-  }
+	.intro__text2 {
+		font-family: 'Proxima Nova Bold';
+		font-size: 11vw;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-align: right;
+		display: block;
+	}
 
-    .intro__wrapper {
-    padding-top: 7.3%;
-    display: flex;
-    justify-content: space-between; /* разводим родительские блоки по краям контейнера */
-    align-items: center; /* центрируем контент родительских блоков по центру */
-  }
+	.intro__wrapper {
+		padding-top: 7.3%;
+		display: flex;
+		justify-content: space-between; /* разводим родительские блоки по краям контейнера */
+		align-items: center; /* центрируем контент родительских блоков по центру */
+	}
 
-  .market__wrapper {
-    margin: 0 auto;
-    margin-top: 11vh;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .market__android {
-    margin-top: 10%; /* 6 */
-    max-width: 100%;
-  }
-
-  .intro__text__wrapper {
-    margin-top: 5vh;
-  }
+	.intro__text__wrapper {
+		margin-top: 5vh;
+	}
 }
 
 @media (max-width: 1075px) {
-  .basketball img {
-    max-width: 58%;
-    margin-left: 40%;
-    margin-top: 0.5vw;
-  }
+	.basketball img {
+		max-width: 58%;
+		margin-left: 40%;
+		margin-top: 0.5vw;
+	}
 }
 
 @media (max-width: 1179px) {
-  .cards__headertext {
-    color: #e7e7e7;
-    font-family: 'Proxima Nova Bold';
-    font-size: 7.6vw;
-    text-transform: uppercase;
-    line-height: 60px;
-    white-space: nowrap;
-  }
+	.cards__headertext {
+		color: #e7e7e7;
+		font-family: 'Proxima Nova Bold';
+		font-size: 7.6vw;
+		text-transform: uppercase;
+		line-height: 60px;
+		white-space: nowrap;
+	}
 }
 
 @media (max-width: 945px) {
-  .footer__title {
-    font-size: 9.5vw;
-  }
+	.footer__title {
+		font-size: 9.5vw;
+	}
 
-  .footer__subtitle {
-    font-size: 3.8vw;
-  }
+	.footer__subtitle {
+		font-size: 3.8vw;
+	}
 }
 
 @media (max-width: 817px) {
-  .footer__market__wrapper {
-    margin: 0 auto;
-    margin-top: 8%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+	.footer__market__wrapper {
+		margin: 0 auto;
+		margin-top: 8%;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 /* 768 */
+@media (max-width: 768px) {
 
+	/* intro */
+
+	.intro {
+		padding: 0 20px;
+	}
+
+	.intro__wrapper {
+		padding-top: 50px;
+	}
+	
+	.intro__text__wrapper {
+		margin: 0 auto;
+		margin-top: 23.6vw;
+		width: 80vw;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/* background-color: rgb(255,255,0); */
+	}
+
+	.intro__text1 {
+		padding-left: 2vw;
+		font-size: 64px;
+		text-align: left;
+		width: 70vw;
+		/* background-color: rgb(99,0,156); */
+		font-size: 8.333334vw; /* 64px при ширине 768px */
+	}
+
+	.intro__text2__container {
+		width: 80vw;
+	}
+	
+	.intro__text2 {
+		padding-left: 16.2vw;
+		font-size: 64px;
+		text-align: left;
+		/* background-color: rgb(0,0,150); */
+		text-align: left;
+		font-size: 8.333334vw;
+	}
+
+	.no_wrap {
+		white-space: normal;
+		/* background-color: rgb(150,0,0); */
+	}
+
+	.intro__subtext__wrapper {
+		padding: 0 30px;
+		margin-top: 21vw;
+		margin-left: 0;
+		width: 100vw;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.intro__subtext {
+		font-size: 16px;
+		padding-right: 0;
+	}
+	
+	.intro__subtext:last-child {
+		padding-right: 0;
+	}
+
+	.market__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 652px;
+		margin: 0 auto;
+		margin-top: 12vh;
+		margin-bottom: 8vh;
+		align-items: left;
+	}
+
+	.market__android {
+		margin-top: 0;
+	}
+
+/* athlets */
+
+	.footballer img {
+		max-width: 58%;
+		object-fit: contain;
+		max-height: 699px;
+		left: -21%;
+		top: 8%;
+		margin-top: 0;
+		margin-left: 0;
+		position: absolute;
+		z-index: 5;
+		-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+		-moz-user-select: none; /* для мозиллы */
+		-webkit-user-select: none; /* для сафари и хрома */
+	}
+}
+
+/* 320 */
+
+@media (max-width: 320px) {
+
+/* 
+	.market__wrapper {
+		margin: 0 auto;
+		margin-top: 11vh;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.market__android {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+*/
+
+}
