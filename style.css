@@ -710,6 +710,14 @@ h6 {
 	height: 100%;
 }
 
+.footer__logo {
+	display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
+	max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
+	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* для мозиллы */
+	-webkit-user-select: none; /* для сафари и хрома */
+}
+
 .footer__links {
 	color: var(--white-color);
 	font-size: 20px;
@@ -805,14 +813,6 @@ h6 {
 		top: 14.5vw;
 	}
 
-	.footer__title {
-		font-size: 9.5vw;
-	}
-
-	.footer__subtitle {
-		font-size: 3.8vw;
-	}
-
 	.footer__social {
 		position: static;
 		margin-left: 0;
@@ -842,9 +842,10 @@ h6 {
 }
 
 /* 768 */
+
 @media (max-width: 768px) {
 
-	/* intro */
+/* intro */
 
 	.intro {
 		padding: 0 20px;
@@ -979,7 +980,7 @@ h6 {
 		min-height: 0px;
 	}
 
-	/* Players */
+/* Players */
 
 	.basketball {
 		position: relative;
@@ -1023,6 +1024,8 @@ h6 {
 
 /* cards */
 
+
+
 /* footer */
 
 	.footer__row {
@@ -1030,6 +1033,7 @@ h6 {
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		padding-top: 15vw;
 		padding-right: 50px;
 		padding-left: 50px;
@@ -1043,13 +1047,29 @@ h6 {
 		padding-left: 0;
 		margin-bottom: 7vw;
 	}
+	
+	.footer__title {
+		display: block;
+		font-size: 9.5vw;
+		line-height: 50px;
+		margin-bottom: 3vw;
+	}
+
+	.footer__subtitle {
+		font-size: 3.8vw;
+		line-height: 20px;
+	}
+
+	.market__ios {
+		margin-bottom: 7vw;
+	}
 
 	.footer__contacts {
 		margin-top: 3vw;
 		height: 12vw;
 	}
 
-	.footer__links, .intro__logo {
+	.footer__links, .footer__logo {
 		display: none;
 	}
 
