@@ -36,6 +36,7 @@ body {
 	font-size: 100%;
 	/* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
 	font-size: 14px;
+	overflow-x: hidden; /* скрываем всё что выходит за вьюпорт (картинки, длинные слова) */
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -126,6 +127,16 @@ h6 {
 	font-style: normal;
 }
 
+/* root */
+
+:root {
+	--base-color: #5E42B0;
+	--number4-color: #8f7bc8;
+	--white-color: #fff;
+	--header-color: #e7e7e7;
+	--black-color: #000;
+ }
+
 /* container */
 
 .container {
@@ -139,7 +150,7 @@ h6 {
 	min-height: 100vh; /* занимать 100% высоты экрана пользователя */
 	padding: 0 7%;
 	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
-	-webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+	-webkit-background-size: cover; /* префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
 	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
 	background-blend-mode: normal;
 	background-repeat: no-repeat;
@@ -158,7 +169,7 @@ h6 {
 .intro__logo {
 	display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
 	max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
-	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
 	-moz-user-select: none; /* для мозиллы */
 	-webkit-user-select: none; /* для сафари и хрома */
 }
@@ -166,10 +177,11 @@ h6 {
 .intro__toptext {
 	font-family: 'Proxima Nova Light';
 	font-size: 14px;
-	color: #fff;
+	color: var(--white-color);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	text-align: right;
+	margin-left: 20px; /* для нормального отображения на телефонах */
 }
 
 .intro__text__wrapper {
@@ -189,7 +201,7 @@ h6 {
 .intro__text1 {
 	font-family: 'Proxima Nova Bold';
 	font-size: 90px;
-	color: #fff;
+	color: var(--white-color);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	text-align: left;
@@ -199,7 +211,7 @@ h6 {
 .intro__text2 {
 	font-family: 'Proxima Nova Bold';
 	font-size: 90px;
-	color: #fff;
+	color: var(--white-color);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	text-align: right;
@@ -237,31 +249,25 @@ h6 {
 }
 
 .market__wrapper {
-	/* width: 100%;
-	position: absolute;
-	bottom: 0
-	left: 0;
-	z-index: 1;
-	*/
 	display: flex;
 	justify-content: space-between;
 	width: 672px;
 	margin: 0 auto;
 	margin-top: 15vh;
-	padding-bottom: 8vh;
 }
 
 .market__ios {
 	border-radius: 38px;
-	background: rgb(94,66,176) url(images/header/IconApple.png) 43px 19px/33px 37px no-repeat;
+	background: var(--base-color) url(images/header/IconApple.png) 43px center/33px 37px no-repeat;
 	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
 	width: 311px;
 	height: 77px;
+	margin-bottom: 5vw;
 }
 
 .market__android {
 	border-radius: 38px;
-	background: rgb(94,66,176) url(images/header/IconGooglePlay.png) 64px center/36px 39px no-repeat;
+	background: var(--base-color) url(images/header/IconGooglePlay.png) 64px center/36px 39px no-repeat;
 	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
 	width: 311px;
 	height: 77px;
@@ -274,7 +280,7 @@ h6 {
 	font-size: 14px;
 	line-height: 1.15em;
 	text-transform: uppercase;
-	color: #fff;
+	color: var(--white-color);
 	margin: 23px 0 0 105px; /* неудобно подгонять вручную, должны быть способы проще */
 	display: block;
 }
@@ -286,7 +292,7 @@ h6 {
 	font-size: 14px;
 	line-height: 1.15em;
 	text-transform: uppercase;
-	color: #fff;
+	color: var(--white-color);
 	margin: 23px 0 0 126px; /* неудобно подгонять вручную, должны быть способы проще */
 	display: block;
 }
@@ -310,23 +316,24 @@ h6 {
 	margin-left: 10%;
 	position: absolute;
 	z-index: 5;
-	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* для мозиллы */
-	-webkit-user-select: none; /* для сафари и хрома */
+	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* префикс для мозиллы */
+	-webkit-user-select: none; /* префикс для сафари и хрома */
 }
 
-.athlets__header-container {
-	margin-left: 50%;
+.athlets__header__container {
+	margin-left: 49%;
 	padding-top: 6.1%;
 	margin-bottom: 28px;
+	word-wrap: break-word;
 }
 
 .headertext {
-	color: #e7e7e7;
+	color: var(--header-color);
 	font-family: 'Proxima Nova Bold';
 	font-size: 90px;
 	text-transform: uppercase;
-	line-height: 60px;
+	line-height: 70px;
 }
 
 .athlets__container {} /* для :nth-child */
@@ -338,24 +345,24 @@ h6 {
 .athlets__item:nth-child(1) {
 	padding: 3.25% 13% 3.25% 50%; /* по часовой стрелке начиная с верха */
 	background: none;
-	max-height: 202px;
+	min-height: 202px;
 }
 
 .athlets__item:nth-child(2) {
 	padding: 3.18% 13% 3.18% 50%; /* по часовой стрелке начиная с верха */
 	background-color: #f6f4fa;
-	max-height: 257px;
+	min-height: 257px;
 }
 
 .athlets__item:nth-child(3) {
 	padding: 4.66% 15% 4.66% 50%; /* по часовой стрелке начиная с верха */
-	background-color: #5e42b0;
-	max-height: 297px;
+	background-color: var(--base-color);
+	min-height: 297px;
 }
 
 .number, .number2 {
 	display: inline-block;
-	color: #000;
+	color: var(--black-color);
 	font-family: 'Proxima Nova Bold';
 	font-size: 18px;
 	vertical-align: top; /* выравниваем текст по верхней границе */
@@ -384,7 +391,7 @@ h6 {
 	border-radius: 3px;
 	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: #5e42b0; /* цвет полоски */
+	background-color: var(--base-color); /* цвет полоски */
 }
 
 .number2:after {
@@ -420,7 +427,7 @@ h6 {
 }
 
 .paragraph {
-	color: #000;
+	color: var(--black-color);
 	font-family: 'Proxima Nova Regular';
 	font-size: 20px;
 	margin-top: 22px;
@@ -429,16 +436,9 @@ h6 {
 }
 
 .paragraph3 {
-	color: #000;
-	font-family: 'Proxima Nova Regular';
-	font-size: 20px;
-	margin-top: 22px;
 	line-height: 34.49px;
 	letter-spacing: 0.05em;
-}
-
-.whitetext {
-	color: #fff;
+	color: var(--white-color);
 }
 
 /* players */
@@ -454,16 +454,17 @@ h6 {
 	margin-top: -25px;
 	position: absolute;
 	z-index: 5;
-	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* для мозиллы */
-	-webkit-user-select: none; /* для сафари и хрома */
+	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
+	-moz-user-select: none; /* префикс для мозиллы */
+	-webkit-user-select: none; /* префикс для сафари и хрома */
 }
 
-.players__header__сontainer {
-	display: inline-block;
-	margin-left: 15%;
+.players__header__container {
+	margin-left: 14%;
 	padding-top: 6.1%;
-	margin-bottom: 21px;
+	margin-bottom: 28px;
+	word-wrap: break-word;
+	/* padding: 3.7% 53% 1% 14.474%; */
 }
 
 .players__container {} /* для :nth-child */
@@ -475,7 +476,7 @@ h6 {
 
 .players__item:nth-child(1) {
 	background: none;
-	max-height: 247px;
+	min-height: 247px;
 }
 
 .players__item:nth-child(2) {
@@ -489,17 +490,13 @@ h6 {
 	max-height: 268px;
 }
 
-.players__headertitle {
-	padding: 3.7% 53% 1% 14.474%; /* по часовой стрелке начиная с верха */
-	width: 100%;
-}
-
 /* be active */
 
 .cards_container {
 	width: 100%;
 	display: flex;
 	justify-self: space-between;
+	position: relative;
 }
 
 .cards__left1 {
@@ -524,14 +521,23 @@ h6 {
 }
 
 .cards__right {
-	padding-left: 8.4%;
-	/* padding-right: 15%; */
+	padding-left: 12vmin;
+	width: 50%;
+	max-width: 50%;
+}
+
+.cards__left {
+	padding-left: 3vw;
 	width: 50%;
 	max-width: 50%;
 }
 
 .cards__headertext__container {
-	margin-top: 33%;
+	margin-top: 36%;
+}
+
+.left__cards__headertext__container {
+	margin-top: 32%;
 }
 
 .cards__paragraph__container {
@@ -543,16 +549,16 @@ h6 {
 }
 
 .cards__paragraph {
-	color: #000;
+	color: var(--black-color);
 	font-family: 'Proxima Nova Regular';
 	font-size: 24px;
 	line-height: 28px;
 	letter-spacing: 0.05em;
-	padding-right: 51%;
+	padding-right: 20%;
 }
 
 .cards__paragraph3 {
-	color: #000;
+	color: var(--black-color);
 	font-family: 'Proxima Nova Regular';
 	font-size: 24px;
 	line-height: 28px;
@@ -562,22 +568,28 @@ h6 {
 
 .cards__headertext {
 	display: inline;
-	color: #e7e7e7;
+	color: var(--header-color);
 	font-family: 'Proxima Nova Bold';
 	font-size: 90px;
 	text-transform: uppercase;
 	line-height: 60px;
-	white-space: nowrap;
+	white-space: wrap;
+}
+
+@media (max-width: 1230px) {
+	.cards__headertext {
+		font-size: 6.8vw;
+	}
 }
 
 .cards__line {
 	max-width: 22px;
 	height: 5px;
 	border-radius: 3px;
-	margin-top: 84px;
-	margin-bottom: 117px;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: #5e42b0; /* цвет полоски */
+	background-color: var(--base-color); /* цвет полоски */
 }
 
 .cards__number__block {
@@ -585,17 +597,20 @@ h6 {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	height: auto;
 }
 
 .cards__number__container {
 	position: absolute;
-	background-color: #5e42b0;
+	background-color: var(--base-color);
+	/*  width: 8.7vw;
+	height: 8.05vw; */
 	width: 168px;
 	height: 155px;
 	display: flex;
 	justify-content: center; /* горизонтальное выравнивание */
 	align-items: center; /* вертикальное выравнивание */
-	top: 211px;
+	top: 13vw;
 }
 
 .number4 {
@@ -615,8 +630,7 @@ h6 {
 	border-radius: 3px;
 	margin-top: 3px;
 	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: #8f7bc8; /* цвет полоски */
-	color: #f5f6f7;
+	background-color: var(--number4-color); /* цвет полоски */
 }
 
 /* footer */
@@ -624,7 +638,7 @@ h6 {
 .footer {
 	width: 100%;
 	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/footer/bg.jpg");
-	-webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+	-webkit-background-size: cover; /* префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
 	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
 	background-blend-mode: normal;
 	background-repeat: no-repeat;
@@ -649,14 +663,14 @@ h6 {
 	max-width: 100%;
 	padding-right: 33px;
 	padding-left: 70px;
-	-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
+	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
 	-moz-user-select: none; /* для мозиллы */
 	-webkit-user-select: none; /* для сафари и хрома */
 }
 
 .footer__title {
 	text-transform: uppercase;
-	color: #fff;
+	color: var(--white-color);
 	font-size: 90px;
 	font-family: "Proxima Nova Bold";
 	line-height: 85px;
@@ -680,9 +694,8 @@ h6 {
 	margin-top: 8.2%;
 }
 
-
 .footer__contacts {
-	margin-top: 10.7%;
+	margin-top: 6vw;
 	height: 168px;
 	padding-right: 50px;
 	padding-left: 50px;
@@ -698,7 +711,7 @@ h6 {
 }
 
 .footer__links {
-	color: #fff;
+	color: var(--white-color);
 	font-size: 20px;
 	font-family: 'Proxima Nova Regular';
 	letter-spacing: 0.05em;
@@ -713,32 +726,15 @@ h6 {
 
 .fab {
 	font-size: 27px;
-	color: #fff;
+	color: var(--white-color);
 	margin-right: 35px;
 }
 
 .fab:last-child {
-	padding-right: 0;
+	margin-right: 0;
 }
 
 /* 1920 */
-
-@media (max-width: 945px) {
-	.footer__social {
-		position: static;
-		margin-left: 0;
-		text-align: center;
-	}
-
-	.fab {
-		margin-left: 35px;
-		margin-right: 35px;
-	}
-
-	.fab:last-child {
-		padding-right: 0;
-	}
-}
 
 @media (max-width: 1278px) {
 
@@ -756,7 +752,7 @@ h6 {
 	.intro__text1 {
 		font-family: 'Proxima Nova Bold';
 		font-size: 11vw;
-		color: #fff;
+		color: var(--white-color);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		text-align: left;
@@ -767,7 +763,7 @@ h6 {
 	.intro__text2 {
 		font-family: 'Proxima Nova Bold';
 		font-size: 11vw;
-		color: #fff;
+		color: var(--white-color);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		text-align: right;
@@ -786,32 +782,50 @@ h6 {
 	}
 }
 
-@media (max-width: 1075px) {
+@media (max-width: 1390px) {
 	.basketball img {
 		max-width: 58%;
 		margin-left: 40%;
-		margin-top: 0.5vw;
+		margin-top: 3vw;
 	}
 }
 
-@media (max-width: 1179px) {
-	.cards__headertext {
-		color: #e7e7e7;
-		font-family: 'Proxima Nova Bold';
-		font-size: 7.6vw;
-		text-transform: uppercase;
-		line-height: 60px;
-		white-space: nowrap;
+@media (max-width: 892px) {
+	.basketball img {
+		max-width: 58%;
+		margin-left: 40%;
+		margin-top: 6vw;
 	}
 }
 
 @media (max-width: 945px) {
+	.cards__number__container {
+		width: 18vw;
+		height: 16.5vw;
+		top: 14.5vw;
+	}
+
 	.footer__title {
 		font-size: 9.5vw;
 	}
 
 	.footer__subtitle {
 		font-size: 3.8vw;
+	}
+
+	.footer__social {
+		position: static;
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.fab {
+		margin-left: 1.6vw;
+		margin-right: 1.6vw;
+	}
+
+	.fab:last-child {
+		padding-right: 0;
 	}
 }
 
@@ -837,12 +851,12 @@ h6 {
 	}
 
 	.intro__wrapper {
-		padding-top: 50px;
+		padding-top: 4vh;
 	}
 	
 	.intro__text__wrapper {
 		margin: 0 auto;
-		margin-top: 23.6vw;
+		margin-top: 6vh;
 		width: 80vw;
 		max-width: 100%;
 		display: flex;
@@ -880,53 +894,177 @@ h6 {
 
 	.intro__subtext__wrapper {
 		padding: 0 30px;
-		margin-top: 21vw;
+		margin-top: 4vh;
 		margin-left: 0;
 		width: 100vw;
 		max-width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 
 	.intro__subtext {
 		font-size: 16px;
+		margin-bottom: 1.5vh;
 		padding-right: 0;
+		padding: 0 42px; /* 42px на телефонах обеспечивают отображение пунктов списка в колонку */
+		text-align: center;
 	}
 	
 	.intro__subtext:last-child {
 		padding-right: 0;
+		padding: 0 40px;
+		margin-bottom: 0;
+		text-align: center;
 	}
 
 	.market__wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		width: 652px;
 		margin: 0 auto;
-		margin-top: 12vh;
-		margin-bottom: 8vh;
-		align-items: left;
+		margin-top: 5vh;
+		padding-bottom: 0;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.market__ios {
+		max-width: 100%;
+		margin-bottom: 5vh;
 	}
 
 	.market__android {
-		margin-top: 0;
+		margin-bottom: 5vh; /* на iphone 5 не хватает высоты экрана, поэтому чтобы секция не была сразу под кнопкой нужен отступ */
+		max-width: 100%;
 	}
 
 /* athlets */
 
 	.footballer img {
-		max-width: 58%;
-		object-fit: contain;
-		max-height: 699px;
-		left: -21%;
+		max-width: 57%;
+		max-height: none;
+		left: -21.2%;
 		top: 8%;
 		margin-top: 0;
 		margin-left: 0;
-		position: absolute;
-		z-index: 5;
-		-ms-user-select: none; /* вендорный префикс запрета выделения текста для эксплорера */
-		-moz-user-select: none; /* для мозиллы */
-		-webkit-user-select: none; /* для сафари и хрома */
+	}
+
+	.athlets__header__container {
+		margin-left: 39%;
+		padding-top: 9%;
+		/* margin-bottom: 28px; */
+		word-wrap: break-word;
+	}
+
+	.headertext {
+		font-size: 11.75vw;
+	}
+
+	.athlets__item:nth-child(1) {
+		padding: 3.25% 5% 3.25% 39%; /* по часовой стрелке начиная с верха */
+		background: none;
+		min-height: 0;
+	}
+	
+	.athlets__item:nth-child(2) {
+		padding: 3.18% 5% 3.18% 39%; /* по часовой стрелке начиная с верха */
+		background-color: #f6f4fa;
+		min-height: 0px;
+	}
+	
+	.athlets__item:nth-child(3) {
+		padding: 4.66% 5% 4.66% 39%; /* по часовой стрелке начиная с верха */
+		background-color: var(--base-color);
+		min-height: 0px;
+	}
+
+	/* Players */
+
+	.basketball {
+		position: relative;
+	}
+
+	.basketball img {
+		max-width: 85%;
+		right: -30%;
+		margin-top: 5vw;
+		margin-left: 0;
+		}
+
+	.players__header__container {
+		margin-left: 5%;
+		padding-top: 10.5%;
+		margin-bottom: 0;
+		word-wrap: break-word;
+	}
+	
+	.players__item {
+		padding: 5.5% 22% 3.7% 5%; /* по часовой стрелке начиная с верха */
+		width: 100%;
+	}
+	
+	.players__item:nth-child(1) {
+		background: none;
+		min-height: 0px;
+	}
+	
+	.players__item:nth-child(2) {
+		padding: 5.5% 22% 3.7% 5%;
+		background-color: #f5f6f7;
+		max-height: 247px;
+	}
+	
+	.players__item:nth-child(3) {
+		padding: 5% 34% 5% 5%; /* по часовой стрелке начиная с верха */
+		background-color: #0a0e34;
+		max-height: 268px;
+	}
+
+/* cards */
+
+/* footer */
+
+	.footer__row {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 15vw;
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	.footer__icon {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		padding-right: 0;
+		padding-left: 0;
+		margin-bottom: 7vw;
+	}
+
+	.footer__contacts {
+		margin-top: 3vw;
+		height: 12vw;
+	}
+
+	.footer__links, .intro__logo {
+		display: none;
+	}
+
+	.footer__social {
+		position: static;
+		margin-left: 0px;
+		left: 0;
+		top: 0;
+		margin: 0 auto;
+	}
+
+	.fab {
+		font-size: 27px;
+		color: var(--white-color);
+		margin-right: 30px;
 	}
 }
 
@@ -934,7 +1072,7 @@ h6 {
 
 @media (max-width: 320px) {
 
-/* 
+/* кнопки в колонку
 	.market__wrapper {
 		margin: 0 auto;
 		margin-top: 11vh;
@@ -947,6 +1085,34 @@ h6 {
 	.market__android {
 		margin-top: 10%;
 		max-width: 100%;
+	}
+*/
+
+/*	список профессий в колонку
+		.intro__subtext__wrapper {
+		padding: 0 30px;
+		margin-top: 4vh;
+		margin-left: 0;
+		width: 100vw;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.intro__subtext {
+		font-size: 16px;
+		margin-bottom: 1.5vh;
+		padding-right: 0;
+		padding: 0 42px; /* 42px на телефонах обеспечивают отображение пунктов списка в колонку
+		text-align: center;
+	}
+	
+	.intro__subtext:last-child {
+		padding-right: 0;
+		padding: 0 40px;
+		margin-bottom: 0;
+		text-align: center;
 	}
 */
 
