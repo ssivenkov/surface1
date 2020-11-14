@@ -34,9 +34,8 @@ body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
-	/* line-height: 1; /* создаёт неровное выделение текста от двух строк и больше */
 	font-size: 14px;
-	overflow-x: hidden; /* скрываем всё что выходит за вьюпорт (картинки, длинные слова) */
+	overflow-x: hidden;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -140,38 +139,37 @@ h6 {
 /* container */
 
 .container {
-	max-width: 1532px; /* растягиваться максимум до этого значения */
+	max-width: 1532px;
 	margin: 0 auto;
 }
 
 /* intro */
 
 .intro {
-	min-height: 100vh; /* занимать 100% высоты экрана пользователя */
+	min-height: 100vh;
 	padding: 0 7%;
 	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/header/back.jpg");
-	-webkit-background-size: cover; /* префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
-	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+	-webkit-background-size: cover;
+	background-size: cover;
 	background-blend-mode: normal;
 	background-repeat: no-repeat;
 	background-position: center;
-	/* background: center no-repeat; - такая запись мешает наложению цвета на фоновую картинку */
 }
 
 .intro__wrapper {
 	padding-top: 50px;
 	display: flex;
 	position: relative;
-	justify-content: space-between; /* разводим родительские блоки по краям контейнера */
-	align-items: center; /* центрируем контент родительских блоков по центру */
+	justify-content: space-between;
+	align-items: center;
 }
 
 .intro__logo {
-	display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
-	max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
-	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* для мозиллы */
-	-webkit-user-select: none; /* для сафари и хрома */
+	display: inline-block;
+	max-width: 100%;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .intro__toptext {
@@ -181,21 +179,11 @@ h6 {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	text-align: right;
-	margin-left: 20px; /* для нормального отображения на телефонах */
+	margin-left: 15px;
 }
 
 .intro__text__wrapper {
 	margin-top: 19vmin;
-	/* не подходит - при маленькой высоте вьюпорта отступ слишком велик
-	padding-top: 20%;
-	*/
-	/* не подходит - текст вылазит за контейнер и к нему не крепится мелкий текст
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
-	padding: 0 7%; /* поскольку position absolute сбил работу контейнера, выравниваем так */
 }
 
 .intro__text1 {
@@ -228,13 +216,10 @@ h6 {
 	display: block;
 	max-width: 500px;
 	text-align: center;
-	/* display: flex;
-	justify-content: space-between;
-	width: 567px; */
 }
 
 .intro__subtext {
-	display: inline; /* иначе надписи начинаются с новой строки */
+	display: inline;
 	font-family: 'Proxima Nova Light';
 	font-size: 14px;
 	color: #9071ea;
@@ -245,7 +230,7 @@ h6 {
 }
 
 .intro__subtext:last-child {
-	padding-right: 6px; /* для красоты */
+	padding-right: 6px;
 }
 
 .market__wrapper {
@@ -281,7 +266,7 @@ h6 {
 	line-height: 1.15em;
 	text-transform: uppercase;
 	color: var(--white-color);
-	margin: 23px 0 0 105px; /* неудобно подгонять вручную, должны быть способы проще */
+	margin: 23px 0 0 105px;
 	display: block;
 }
 
@@ -293,7 +278,7 @@ h6 {
 	line-height: 1.15em;
 	text-transform: uppercase;
 	color: var(--white-color);
-	margin: 23px 0 0 126px; /* неудобно подгонять вручную, должны быть способы проще */
+	margin: 23px 0 0 126px;
 	display: block;
 }
 
@@ -310,15 +295,13 @@ h6 {
 .footballer img {
 	max-width: 33.4%;
 	object-fit: contain;
-	/* left: 13.9%;
-	right: 55.1%; */
 	margin-top: 2.2072%;
 	margin-left: 10%;
 	position: absolute;
 	z-index: 5;
-	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* префикс для мозиллы */
-	-webkit-user-select: none; /* префикс для сафари и хрома */
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .athlets__header__container {
@@ -336,26 +319,26 @@ h6 {
 	line-height: 70px;
 }
 
-.athlets__container {} /* для :nth-child */
+.athlets__container {}
 
 .athlets__item {
 	width: 100%;
 }
 
 .athlets__item:nth-child(1) {
-	padding: 3.25% 13% 3.25% 50%; /* по часовой стрелке начиная с верха */
+	padding: 3.25% 13% 3.25% 50%;
 	background: none;
 	min-height: 202px;
 }
 
 .athlets__item:nth-child(2) {
-	padding: 3.18% 13% 3.18% 50%; /* по часовой стрелке начиная с верха */
+	padding: 3.18% 13% 3.18% 50%;
 	background-color: #f6f4fa;
 	min-height: 257px;
 }
 
 .athlets__item:nth-child(3) {
-	padding: 4.66% 15% 4.66% 50%; /* по часовой стрелке начиная с верха */
+	padding: 4.66% 15% 4.66% 50%;
 	background-color: var(--base-color);
 	min-height: 297px;
 }
@@ -365,7 +348,7 @@ h6 {
 	color: var(--black-color);
 	font-family: 'Proxima Nova Bold';
 	font-size: 18px;
-	vertical-align: top; /* выравниваем текст по верхней границе */
+	vertical-align: top;
 	line-height: 1;
 	letter-spacing: 0.05em;
 	margin-right: 8px;
@@ -376,44 +359,43 @@ h6 {
 	color: #9173e6;
 	font-family: 'Proxima Nova Bold';
 	font-size: 18px;
-	vertical-align: top; /* выравниваем текст по верхней границе */
+	vertical-align: top;
 	line-height: 1;
 	letter-spacing: 0.05em;
 	margin-right: 8px;
 }
 
-/* псевдоэлемент последнего потомка элемента (полоска) */
 .number:after {
-	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+	content: "";
 	display: block;
 	width: 50px;
 	height: 5px;
 	border-radius: 3px;
 	margin-top: 3px;
-	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: var(--base-color); /* цвет полоски */
+	width: 100%;
+	background-color: var(--base-color);
 }
 
 .number2:after {
-	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+	content: "";
 	display: block;
 	width: 50px;
 	height: 5px;
 	border-radius: 3px;
 	margin-top: 3px;
-	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: #efefef; /* цвет полоски */
+	width: 100%;
+	background-color: #efefef;
 }
 
 .number3:after {
-	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+	content: "";
 	display: block;
 	width: 50px;
 	height: 5px;
 	border-radius: 3px;
 	margin-top: 3px;
-	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: #efefef; /* цвет полоски */
+	width: 100%;
+	background-color: #efefef;
 }
 
 .header {
@@ -423,7 +405,7 @@ h6 {
 	font-size: 36px;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	line-height: 0.85; /* выравниваем по верхней границе заголовок с цифрой */
+	line-height: 0.85;
 }
 
 .paragraph {
@@ -444,7 +426,7 @@ h6 {
 /* players */
 
 .players {
-	position: relative; /* для сдвига абсолютно позиционированной картинки */
+	position: relative;
 }
 
 .basketball img {
@@ -454,9 +436,9 @@ h6 {
 	margin-top: -25px;
 	position: absolute;
 	z-index: 5;
-	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* префикс для мозиллы */
-	-webkit-user-select: none; /* префикс для сафари и хрома */
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .players__header__container {
@@ -464,13 +446,12 @@ h6 {
 	padding-top: 6.1%;
 	margin-bottom: 28px;
 	word-wrap: break-word;
-	/* padding: 3.7% 53% 1% 14.474%; */
 }
 
-.players__container {} /* для :nth-child */
+.players__container {}
 
 .players__item {
-	padding: 3.7% 53% 3.7% 14.474%; /* по часовой стрелке начиная с верха */
+	padding: 3.7% 53% 3.7% 14.474%;
 	width: 100%;
 }
 
@@ -485,7 +466,7 @@ h6 {
 }
 
 .players__item:nth-child(3) {
-	padding: 5% 50% 5% 14.474%; /* по часовой стрелке начиная с верха */
+	padding: 5% 50% 5% 14.474%;
 	background-color: #0a0e34;
 	max-height: 268px;
 }
@@ -495,38 +476,38 @@ h6 {
 .cards_container {
 	width: 100%;
 	display: flex;
-	justify-self: space-between;
+	justify-content: space-between;
 	position: relative;
 }
 
-.cards__left1 {
-	background: url(images/cards/1.jpg) center center no-repeat;
+.cards_container__opposite_site {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.cards__side_image {
 	width: 50%;
 	max-width: 50%;
 	max-height: 730px;
 }
 
-.cards__left2 {
-	background: url(images/cards/2.jpg) center center no-repeat;
-	width: 50%;
-	max-width: 50%;
+.cards__img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
 	max-height: 730px;
 }
 
-.cards__left3 {
-	background: url(images/cards/3.jpg) center center no-repeat;
-	width: 50%;
-	max-width: 50%;
-	max-height: 730px;
-}
-
-.cards__right {
+.cards__side_text {
 	padding-left: 12vmin;
 	width: 50%;
 	max-width: 50%;
 }
 
-.cards__left {
+.cards__opposite_side_text {
 	padding-left: 3vw;
 	width: 50%;
 	max-width: 50%;
@@ -588,8 +569,8 @@ h6 {
 	border-radius: 3px;
 	margin-top: 5vw;
 	margin-bottom: 5vw;
-	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: var(--base-color); /* цвет полоски */
+	width: 100%;
+	background-color: var(--base-color);
 }
 
 .cards__number__block {
@@ -603,13 +584,11 @@ h6 {
 .cards__number__container {
 	position: absolute;
 	background-color: var(--base-color);
-	/*  width: 8.7vw;
-	height: 8.05vw; */
 	width: 168px;
 	height: 155px;
 	display: flex;
-	justify-content: center; /* горизонтальное выравнивание */
-	align-items: center; /* вертикальное выравнивание */
+	justify-content: center;
+	align-items: center;
 	top: 13vw;
 }
 
@@ -623,14 +602,14 @@ h6 {
 }
 
 .number4:after {
-	content: ""; /* обязательное свойство - генерирует видимое содержимое псевдоэлементов */
+	content: "";
 	display: block;
 	width: 50px;
 	height: 5px;
 	border-radius: 3px;
 	margin-top: 3px;
-	width: 100%; /* занимать 100 % ширины блока (а его ширина зависит от контента)*/
-	background-color: var(--number4-color); /* цвет полоски */
+	width: 100%;
+	background-color: var(--number4-color);
 }
 
 /* footer */
@@ -638,8 +617,8 @@ h6 {
 .footer {
 	width: 100%;
 	background-image: linear-gradient(180deg, rgba(10,14,52,0.9), rgba(10,14,52,0.9)), url("images/footer/bg.jpg");
-	-webkit-background-size: cover; /* префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
-	background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+	-webkit-background-size: cover;
+	background-size: cover;
 	background-blend-mode: normal;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -663,9 +642,9 @@ h6 {
 	max-width: 100%;
 	padding-right: 33px;
 	padding-left: 70px;
-	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* для мозиллы */
-	-webkit-user-select: none; /* для сафари и хрома */
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .footer__title {
@@ -694,9 +673,49 @@ h6 {
 	margin-top: 8.2%;
 }
 
+.footer__market__ios {
+	border-radius: 38px;
+	background: var(--base-color) url(images/header/IconApple.png) 43px center/33px 37px no-repeat;
+	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
+	width: 311px;
+	height: 77px;
+	margin-bottom: 5vw;
+}
+
+.footer__market__android {
+	border-radius: 38px;
+	background: var(--base-color) url(images/header/IconGooglePlay.png) 64px center/36px 39px no-repeat;
+	box-shadow: 8px 13.8px 24px 0px rgb(10,14,52);
+	width: 311px;
+	height: 77px;
+}
+
+.footer__market__text__ios {
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	line-height: 1.15em;
+	text-transform: uppercase;
+	color: var(--white-color);
+	margin: 23px 0 0 105px;
+	display: block;
+}
+
+.footer__market__text__android {
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	line-height: 1.15em;
+	text-transform: uppercase;
+	color: var(--white-color);
+	margin: 23px 0 0 126px;
+	display: block;
+}
+
 .footer__contacts {
 	margin-top: 6vw;
-	height: 168px;
 	padding-right: 50px;
 	padding-left: 50px;
 	position: relative;
@@ -711,11 +730,13 @@ h6 {
 }
 
 .footer__logo {
-	display: inline-block; /* делаем картинку блочно-строчным объектом, чтоб с ней в одной строке была другая надпись и действовало масштабирование */
-	max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
-	-ms-user-select: none; /* префикс запрета выделения текста для эксплорера */
-	-moz-user-select: none; /* для мозиллы */
-	-webkit-user-select: none; /* для сафари и хрома */
+	display: inline-block;
+	max-width: 100%;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .footer__links {
@@ -723,6 +744,8 @@ h6 {
 	font-size: 20px;
 	font-family: 'Proxima Nova Regular';
 	letter-spacing: 0.05em;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
 }
 
 .footer__social {
@@ -744,8 +767,15 @@ h6 {
 
 /* 1920 */
 
-@media (max-width: 1278px) {
+@media (max-width: 1390px) {
+	.basketball img {
+		max-width: 58%;
+		margin-left: 40%;
+		margin-top: 3vw;
+	}
+}
 
+@media (max-width: 1278px) {
 	.intro__text__wrapper {
 		margin-top: 5vh;
 	}
@@ -753,6 +783,33 @@ h6 {
 	.market__wrapper {
 		margin-top: 11vh;
 		padding-bottom: 8vh;
+	}
+}
+
+@media (max-width: 945px) {
+	.footer__social {
+		position: static;
+		margin-left: 0;
+		text-align: center;
+		margin-top: 4vw;
+		margin-bottom: 4vw;
+	}
+
+	.fab {
+		margin-left: 1.6vw;
+		margin-right: 1.6vw;
+	}
+
+	.fab:last-child {
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 892px) {
+	.basketball img {
+		max-width: 58%;
+		margin-left: 40%;
+		margin-top: 6vw;
 	}
 }
 
@@ -764,7 +821,7 @@ h6 {
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		text-align: left;
-		display: block; /* перенос неуместен */
+		display: block;
 		white-space: nowrap;
 	}
 
@@ -781,55 +838,18 @@ h6 {
 	.intro__wrapper {
 		padding-top: 7.3%;
 		display: flex;
-		justify-content: space-between; /* разводим родительские блоки по краям контейнера */
-		align-items: center; /* центрируем контент родительских блоков по центру */
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.intro__text__wrapper {
 		margin-top: 5vh;
 	}
-}
 
-@media (max-width: 1390px) {
-	.basketball img {
-		max-width: 58%;
-		margin-left: 40%;
-		margin-top: 3vw;
-	}
-}
-
-@media (max-width: 892px) {
-	.basketball img {
-		max-width: 58%;
-		margin-left: 40%;
-		margin-top: 6vw;
-	}
-}
-
-@media (max-width: 945px) {
-	.cards__number__container {
-		width: 18vw;
-		height: 16.5vw;
-		top: 14.5vw;
+	.footer__title {
+		font-size: 11.015vw;
 	}
 
-	.footer__social {
-		position: static;
-		margin-left: 0;
-		text-align: center;
-	}
-
-	.fab {
-		margin-left: 1.6vw;
-		margin-right: 1.6vw;
-	}
-
-	.fab:last-child {
-		padding-right: 0;
-	}
-}
-
-@media (max-width: 817px) {
 	.footer__market__wrapper {
 		margin: 0 auto;
 		margin-top: 8%;
@@ -863,7 +883,6 @@ h6 {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		/* background-color: rgb(255,255,0); */
 	}
 
 	.intro__text1 {
@@ -871,8 +890,7 @@ h6 {
 		font-size: 64px;
 		text-align: left;
 		width: 70vw;
-		/* background-color: rgb(99,0,156); */
-		font-size: 8.333334vw; /* 64px при ширине 768px */
+		font-size: 8.333334vw;
 	}
 
 	.intro__text2__container {
@@ -883,14 +901,12 @@ h6 {
 		padding-left: 16.2vw;
 		font-size: 64px;
 		text-align: left;
-		/* background-color: rgb(0,0,150); */
 		text-align: left;
 		font-size: 8.333334vw;
 	}
 
 	.no_wrap {
 		white-space: normal;
-		/* background-color: rgb(150,0,0); */
 	}
 
 	.intro__subtext__wrapper {
@@ -905,10 +921,10 @@ h6 {
 	}
 
 	.intro__subtext {
-		font-size: 16px;
+		font-size: calc(7px + 2vh);
 		margin-bottom: 1.5vh;
 		padding-right: 0;
-		padding: 0 42px; /* 42px на телефонах обеспечивают отображение пунктов списка в колонку */
+		padding: 0 42px;
 		text-align: center;
 	}
 	
@@ -921,7 +937,7 @@ h6 {
 
 	.market__wrapper {
 		margin: 0 auto;
-		margin-top: 5vh;
+		margin-top: 4vh;
 		padding-bottom: 0;
 		max-width: 100%;
 		display: flex;
@@ -932,12 +948,28 @@ h6 {
 
 	.market__ios {
 		max-width: 100%;
-		margin-bottom: 5vh;
+		margin-bottom: 4vh;
+		height: 10vh;
+		max-height: 77px;
+		display: flex;
+		align-items: center;
 	}
 
 	.market__android {
-		margin-bottom: 5vh; /* на iphone 5 не хватает высоты экрана, поэтому чтобы секция не была сразу под кнопкой нужен отступ */
+		margin-bottom: 5vh;
 		max-width: 100%;
+		height: 10vh;
+		max-height: 77px;
+		display: flex;
+		align-items: center;
+	}
+
+	.market__text__ios {
+		margin: 0 0 0 105px;
+	}
+	
+	.market__text__android {
+		margin: 0 0 0 126px;
 	}
 
 /* athlets */
@@ -952,30 +984,47 @@ h6 {
 	}
 
 	.athlets__header__container {
-		margin-left: 39%;
-		padding-top: 9%;
-		/* margin-bottom: 28px; */
+		margin-left: 38vw;
+		padding-top: 9vw;
+		margin-bottom: 3.645vw;
 		word-wrap: break-word;
 	}
 
 	.headertext {
-		font-size: 11.75vw;
+		font-size: 11.718vw;
+		line-height: normal;
+	}
+
+	.header {
+		font-size: 4.687vw;
+
+	}
+
+	.paragraph {
+		font-size: 2.604vw;
+		line-height: normal;
+		margin-top: 2.864vw;
+	}
+
+	.number, .number2, .number3 {
+		font-size: 2.343vw;
+		margin-right: 1.041vw;
 	}
 
 	.athlets__item:nth-child(1) {
-		padding: 3.25% 5% 3.25% 39%; /* по часовой стрелке начиная с верха */
+		padding: 3.25vw 5vw 3.25vw 39vw;
 		background: none;
 		min-height: 0;
 	}
 	
 	.athlets__item:nth-child(2) {
-		padding: 3.18% 5% 3.18% 39%; /* по часовой стрелке начиная с верха */
+		padding: 3.18vw 5vw 3.18vw 39vw;
 		background-color: #f6f4fa;
 		min-height: 0px;
 	}
 	
 	.athlets__item:nth-child(3) {
-		padding: 4.66% 5% 4.66% 39%; /* по часовой стрелке начиная с верха */
+		padding: 4.66vw 5vw 4.66vw 39vw;
 		background-color: var(--base-color);
 		min-height: 0px;
 	}
@@ -1001,7 +1050,7 @@ h6 {
 	}
 	
 	.players__item {
-		padding: 5.5% 22% 3.7% 5%; /* по часовой стрелке начиная с верха */
+		padding: 5.5% 22% 3.7% 5%;
 		width: 100%;
 	}
 	
@@ -1017,14 +1066,106 @@ h6 {
 	}
 	
 	.players__item:nth-child(3) {
-		padding: 5% 34% 5% 5%; /* по часовой стрелке начиная с верха */
+		padding: 5% 34% 5% 5%;
 		background-color: #0a0e34;
 		max-height: 268px;
 	}
 
 /* cards */
 
+.cards_container {
+	justify-content: flex-start;
+	flex-direction: column;
+	position: relative;
+}
 
+.cards_container__opposite_site {
+	justify-content: flex-start;
+	flex-direction: column-reverse;
+	position: relative;
+}
+
+.cards__side_image {
+	width: 100%;
+	max-width: 100%;
+}
+
+.cards__side_text {
+	padding-left: 4vw;
+	padding-right: 4vw;
+	width: 100%;
+	max-width: 100%;
+}
+
+.cards__opposite_side_text {
+	padding-left: 4vw;
+	padding-right: 4vw;
+	width: 100%;
+	max-width: 100%;
+}
+
+.cards__headertext__container {
+	margin-top: 12%;
+}
+
+.left__cards__headertext__container {
+	margin-top: 12%;
+}
+
+.cards__headertext {
+	font-size: 11.718vw;
+	line-height: 60px;
+	white-space: wrap;
+}
+
+.cards__paragraph__container {
+	margin-top: 5%;
+}
+
+.cards__paragraph__container3 {
+	margin-top: 5%;
+}
+
+.cards__paragraph {
+	font-size: 3.125vw;
+	padding-right: 0;
+	line-height: 4vw;
+}
+
+.cards__paragraph3 {
+	font-size: 3.125vw;
+	padding-right: 27%;
+	line-height: 4vw;
+}
+
+.cards__line {
+	margin-top: 5vw;
+	margin-bottom: 9vw;
+}
+
+.cards__number__block {
+	position: static;
+	display: block;
+	justify-content: flex-start;
+	width: 100%;
+	height: auto;
+	z-index: 5;
+}
+
+.cards__number__container {
+	width: 15.104vw;
+	height: 15.104vw;
+	left: 4vw;
+	top: 64vw;
+}
+
+.cards__number__container_fix {
+	top: 55vw;
+}
+
+.number4 {
+	font-size: 24px;
+}
 
 /* footer */
 
@@ -1051,7 +1192,7 @@ h6 {
 	.footer__title {
 		display: block;
 		font-size: 9.5vw;
-		line-height: 50px;
+		line-height: normal;
 		margin-bottom: 3vw;
 	}
 
@@ -1060,13 +1201,60 @@ h6 {
 		line-height: 20px;
 	}
 
-	.market__ios {
-		margin-bottom: 7vw;
+	.footer__market__wrapper {
+		margin: 0 auto;
+		margin-top: 4vh;
+		padding-bottom: 0;
+		padding: 0 7%;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.footer__market__ios {
+		max-width: 100%;
+		margin-bottom: 4vh;
+		height: 10vh;
+		max-height: 77px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.footer__market__android {
+		margin-bottom: 5vh;
+		max-width: 100%;
+		height: 10vh;
+		max-height: 77px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.footer__market__text__ios {
+		margin: 0 0 0 105px;
+	}
+	
+	.footer__market__text__android {
+		margin: 0 0 0 126px;
 	}
 
 	.footer__contacts {
 		margin-top: 3vw;
-		height: 12vw;
+	}
+
+	.footer__contacts {
+		padding-right: 50px;
+		padding-left: 50px;
+		position: relative;
+		background-color: rgba(10,14,52,.6);
+	}
+	
+	.footer__contacts__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
 	}
 
 	.footer__links, .footer__logo {
@@ -1074,11 +1262,13 @@ h6 {
 	}
 
 	.footer__social {
-		position: static;
+		position: relative;
 		margin-left: 0px;
 		left: 0;
 		top: 0;
 		margin: 0 auto;
+		margin-top: 4vw;
+		margin-bottom: 4vw;
 	}
 
 	.fab {
@@ -1086,54 +1276,4 @@ h6 {
 		color: var(--white-color);
 		margin-right: 30px;
 	}
-}
-
-/* 320 */
-
-@media (max-width: 320px) {
-
-/* кнопки в колонку
-	.market__wrapper {
-		margin: 0 auto;
-		margin-top: 11vh;
-		max-width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	.market__android {
-		margin-top: 10%;
-		max-width: 100%;
-	}
-*/
-
-/*	список профессий в колонку
-		.intro__subtext__wrapper {
-		padding: 0 30px;
-		margin-top: 4vh;
-		margin-left: 0;
-		width: 100vw;
-		max-width: 100%;
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-
-	.intro__subtext {
-		font-size: 16px;
-		margin-bottom: 1.5vh;
-		padding-right: 0;
-		padding: 0 42px; /* 42px на телефонах обеспечивают отображение пунктов списка в колонку
-		text-align: center;
-	}
-	
-	.intro__subtext:last-child {
-		padding-right: 0;
-		padding: 0 40px;
-		margin-bottom: 0;
-		text-align: center;
-	}
-*/
-
 }

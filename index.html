@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!-- запрещаем скейл на телефонах -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- запрещаем скейл на телефонах -->
 	<title>Surface1</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="images/header/Icon.png">
@@ -101,8 +101,10 @@
 
 	<section class="cards">
 		<div class="cards_container">
-			<div class="cards__left1"></div>
-			<div class="cards__right">
+			<div class="cards__side_image">
+				<img class="cards__img" src="images/cards/1.jpg" alt="">
+			</div>
+			<div class="cards__side_text">
 				<div class="cards__headertext__container">
 					<h3 class="cards__headertext">be active</h3>
 				</div>
@@ -118,8 +120,13 @@
 			</div>
 		</div>
 
-		<div class="cards_container">
-			<div class="cards__left">
+		<div class="cards_container__opposite_site">
+			<div class="cards__number__block">
+				<div class="cards__number__container cards__number__container_fix">
+					<div class="number4"><p>02</p></div>
+				</div>
+			</div>
+			<div class="cards__opposite_side_text">
 				<div class="left__cards__headertext__container">
 					<h3 class="cards__headertext">find contact</h3>
 				</div>
@@ -128,17 +135,16 @@
 				</div>
 				<div class="cards__line"></div>
 			</div>
-			<div class="cards__left2"></div>
-			<div class="cards__number__block">
-				<div class="cards__number__container">
-					<div class="number4"><p>02</p></div>
-				</div>
+			<div class="cards__side_image">
+				<img class="cards__img" src="images/cards/2.jpg" alt="">
 			</div>
 		</div>
-
+		
 		<div class="cards_container">
-			<div class="cards__left3"></div>
-			<div class="cards__right">
+			<div class="cards__side_image">
+				<img class="cards__img" src="images/cards/3.jpg" alt="">
+			</div>
+			<div class="cards__side_text">
 				<div class="cards__headertext__container">
 					<h3 class="cards__headertext">work it</h3>
 				</div>
@@ -166,11 +172,11 @@
 			</div>
 
 			<div class="footer__market__wrapper">
-				<div class="market__ios">
-					<div class="market__text__ios"><p>download on the <br><span class="market__semibold">app store</span></p></div>
+				<div class="footer__market__ios">
+					<div class="footer__market__text__ios"><p>download on the <br><span class="market__semibold">app store</span></p></div>
 				</div>
-				<div class="market__android">
-					<div class="market__text__android"><p>get it on <br><span class="market__semibold">google play</span></p></div>
+				<div class="footer__market__android">
+					<div class="footer__market__text__android"><p>get it on <br><span class="market__semibold">google play</span></p></div>
 				</div>
 			</div>
 
