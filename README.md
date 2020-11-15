@@ -1,2 +1,3 @@
-# Surface1 - лендинг на спортивную тематику
-# Подход Desktop first, адаптивная вёрстка
+# Surface1 - landing page on sports topics
+# Desktop first, adaptive site
+# [Link](http://ssivenkov.github.io/surface1 "Link")
