@@ -1,3 +1,3 @@
 # Surface1 - landing page on sports topics.
 # Desktop first, responsive design.
-# [Link](https://surfaceone.site "Link")
+# [Link](https://ssivenkov.github.io/surface1 "Link")
